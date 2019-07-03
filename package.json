@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
-    "prepublish": "npm test"
+    "prepublish": "npm run snyk-protect; npm test",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,8 @@
     "access-sniff": "git+https://github.com/benweizhu/AccessSniff.git",
     "gulp-util": "^3.0.4",
     "lodash": "^4.3.0",
-    "through2": "^0.6.5"
-  }
+    "through2": "^0.6.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
